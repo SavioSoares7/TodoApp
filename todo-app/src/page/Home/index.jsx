@@ -1,8 +1,10 @@
 import { Container } from "./style";
+import { TasksItem } from "../../components/TasksItem";
+
 export function Home() {
   return (
     <Container>
-      <h1>Todo list</h1>
+      <TasksItem></TasksItem>
     </Container>
   );
 }

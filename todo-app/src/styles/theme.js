@@ -1,7 +1,7 @@
 export default {
   COLORS: {
-    BG_COLOR: "#14BD84",
-    FT_BLACK: "#000",
-    FT_BLACK200: "#222",
+    BG_COLOR: "#18854e",
+    FT_BLACK: "#fff",
+    FT_BLACK200: "#eee",
   },
 };
