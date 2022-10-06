@@ -1,5 +1,5 @@
 import { Container, TasksNoCompleted, TasksCompleted } from "./style";
-
+import { Task } from "../Task";
 export function TasksItem() {
   const tasks = [
     {
@@ -30,7 +30,7 @@ export function TasksItem() {
           {tasks
             .filter((item) => item.isCompleted === false)
             .map((item) => (
-              <p key={item.id}>{item.task}</p>
+              <Task task={item} key={item.id} />
             ))}
         </div>
       </TasksNoCompleted>
@@ -41,7 +41,7 @@ export function TasksItem() {
           {tasks
             .filter((item) => item.isCompleted)
             .map((item) => (
-              <p key={item.id}>{item.task}</p>
+              <Task task={item} key={item.id} />
             ))}
         </div>
       </TasksCompleted>
