@@ -12,6 +12,7 @@ export function Task({ task }) {
           }
         >
           <input type="checkbox" defaultChecked={task.isCompleted} />
+
           <span>{task.task}</span>
         </label>
       </TaskTitle>
