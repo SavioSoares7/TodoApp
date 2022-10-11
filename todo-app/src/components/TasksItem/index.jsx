@@ -1,5 +1,8 @@
 import { Container, TasksNoCompleted, TasksCompleted } from "./style";
+
 import { Task } from "../Task";
+import { ContainerTask } from "../ContainerTask";
+
 export function TasksItem() {
   const tasks = [
     {
@@ -21,6 +24,7 @@ export function TasksItem() {
 
   return (
     <Container>
+      <ContainerTask />
       <h3>My Tasks</h3>
 
       <TasksNoCompleted>
