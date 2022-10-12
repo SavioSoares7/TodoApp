@@ -21,7 +21,8 @@ export function Home() {
       alert.error("Por favor preencha o campo para cadastrar uma nova tarefa");
       return;
     }
-    setTask(...tasks, task);
+    
+    setTasks((item) => [...item, task]);
   };
 
   const changeTask = ({ target }) => {
