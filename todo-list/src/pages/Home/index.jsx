@@ -2,6 +2,7 @@ import { Container, ContainerInput } from "./style";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { ContainerTask } from "../../components/ContainerTask";
 
 import { useState } from "react";
 
@@ -20,9 +21,7 @@ export function Home() {
       alert.error("Por favor preencha o campo para cadastrar uma nova tarefa");
       return;
     }
-    tasks.push(task);
-
-    console.log(tasks);
+    setTask(...tasks, task);
   };
 
   const changeTask = ({ target }) => {
@@ -43,6 +42,8 @@ export function Home() {
         <Input changeTask={changeTask} title="Cadastrar tarefa " />
         <Button handleTask={handleTask} Children={<AiOutlinePlus />}></Button>
       </ContainerInput>
+
+      <ContainerTask tasks={tasks} />
     </Container>
   );
 }
