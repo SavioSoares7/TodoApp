@@ -14,14 +14,15 @@ export function Home() {
 
   const [task, setTask] = useState("");
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([{}]);
 
   const handleTask = () => {
     if (!task) {
       alert.error("Por favor preencha o campo para cadastrar uma nova tarefa");
       return;
     }
-    setTask(...tasks, task);
+    alert.success("Tarefa adicionada");
+    setTasks((item) => [...item, task]);
   };
 
   const changeTask = ({ target }) => {
