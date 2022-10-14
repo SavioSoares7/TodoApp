@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const TaskContainer = styled.div`
+  .completed {
+    text-decoration: line-through;
+  }
+  &.delete {
+    display: none;
+  }
   background: #fff;
   display: flex;
   flex-wrap: wrap;
